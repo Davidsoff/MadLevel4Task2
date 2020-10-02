@@ -1,12 +1,31 @@
 <resources>
     <string name="app_name">MadLevel4Task2</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_history">History</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="game_fragment_label">First Fragment</string>
+    <string name="history_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="paper">paper</string>
+    <string name="rock">rock</string>
+    <string name="scissors">scissors</string>
+    <string name="versus">V.S.</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions: select rock, paper, or scissors to play</string>
+    <string name="stats_explanation">Your all time statistics</string>
+    <string name="stats">Win:%1$d Draw: %2$d Lose: %3$d</string>
+
+    <string name="computer_name">Computer</string>
+    <string name="player_name">You</string>
+    <string name="computer_move_description">computer: %1$s</string>
+    <string name="player_move_description">player: %1$s</string>
+    <string name="result_date_format">EEE MMM d HH:mm:ss \'GMT\'Z yyyy</string>
+
+    <string name="player_won">Player won!</string>
+    <string name="draw">Draw</string>
+    <string name="computer_won">Computer won!</string>
+    <string name="action_delete_all">Delete all games</string>
 </resources>

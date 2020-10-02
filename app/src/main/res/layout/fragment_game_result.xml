@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    tools:context=".ui.GameResultFragment">
+
+    <ImageView
+        android:id="@+id/ivComputerMove"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/computer_move_description"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="@+id/tvVersus"
+        app:layout_constraintEnd_toStartOf="@+id/tvVersus"
+        app:layout_constraintTop_toTopOf="@+id/tvVersus" />
+
+    <ImageView
+        android:id="@+id/ivPlayerMove"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/player_move_description"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvVersus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVersus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/versus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlayerMove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivPlayerMove" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/draw"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvComputer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/computer_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivComputerMove"
+        app:layout_constraintStart_toStartOf="@+id/ivComputerMove"
+        app:layout_constraintTop_toBottomOf="@+id/ivComputerMove" />
+
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivPlayerMove"
+        app:layout_constraintStart_toStartOf="@+id/ivPlayerMove"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayerMove" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_date_format"
+        app:layout_constraintBottom_toTopOf="@+id/ivComputerMove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

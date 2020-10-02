@@ -4,25 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameFragment">
+    android:background="#FFFFFF"
+    tools:context=".ui.GameFragment">
 
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
+    <ImageButton
+        android:id="@+id/btn_paper"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:clickable="true"
+        android:contentDescription="@string/paper"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_scissors"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_rock" />
+
+    <ImageButton
+        android:id="@+id/btn_rock"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:clickable="true"
+        android:contentDescription="@string/rock"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_paper"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_scissors"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:clickable="true"
+        android:contentDescription="@string/scissors"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/scissors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_paper" />
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <View
+        android:id="@+id/rectangle_at_the_top"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="?attr/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/tvStatsExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/stats_explanation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_at_the_top" />
+
+    <TextView
+        android:id="@+id/tvStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatsExplanation" />
+
+    <include layout="@layout/fragment_game_result"
+        android:id="@+id/single_game_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStats" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
