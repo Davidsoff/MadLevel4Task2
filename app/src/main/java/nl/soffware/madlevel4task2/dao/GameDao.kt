@@ -9,7 +9,7 @@ import nl.soffware.madlevel4task2.model.GameResult
 
 @Dao
 interface GameDao {
-    @Query("SELECT * FROM game_table")
+    @Query("SELECT * FROM game_table ORDER BY date DESC")
     suspend fun getAllGames(): List<Game>
 
     @Insert
